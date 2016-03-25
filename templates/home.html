@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<style type='text/css'>
+    h2 {
+      text-align: center
+    }
+    div.center {
+      text-align: center
+    }
+</style>
+{% endblock %} 	
+
+{% block content %}
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-10">
+			<div class="jumbo">
+				<h2>Scan This!</h2>
+				<div class="center"><img src="{{ url_for('static', filename='img/qrcode.png') }}"></img></div>		
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-10">
+			<div class="jumbo">
+				<h2><a href="{{ url_for('survey') }}">Take the survey</a></h2>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+	</div>	
+</div>
+
+{% endblock %} 	
